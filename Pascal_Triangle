@@ -1,0 +1,9 @@
+def pascal_triangle(depth):
+
+
+def main():
+    pascal_triangle()
+
+
+if __name__ == "__main__":
+    main()
