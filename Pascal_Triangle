@@ -1,8 +1,19 @@
-def pascal_triangle(depth):
+def pt_number(n, x):
+    if n <= -1:
+        return (0 + x)
+    elif n == 0:
+        return (1 + x)
+    else:
+        return pt_number(n - 1, n - 2)
 
+
+def pascal_triangle(row_depth):
+    for x in range(1, row_depth, 1):
+        for y in range(0, x, 1):
+            print pt_number(y, 0)
 
 def main():
-    pascal_triangle()
+    pascal_triangle(4)
 
 
 if __name__ == "__main__":
