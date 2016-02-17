@@ -1,5 +1,5 @@
 """
-    Author: Rowland DePree                      Inversion_of_File.py
+    Author: Rowland DePree                      Inversion_of_File_V2.py
 
     A program designed to read in an file containing numbers on each line.  Then sort the array of numbers using
     one of the divide and conquer sorting techniques, quick sort.  Then it will compare the original array to the newly
@@ -15,7 +15,7 @@ def compare_file_with_array(array, sorted_array):
     :param sorted_array:
     :return:
     """
-    print 'Here are the line numbers with array spots that match: '
+    print 'Line numbers from file that match up with sorted array: '
     for x in range(len(array)):
         if array[x] == sorted_array[x]:
             print(x + 1)
