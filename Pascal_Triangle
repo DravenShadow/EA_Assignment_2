@@ -15,7 +15,7 @@ def pascal_triangle(row_depth):
         print list
 
 def main():
-    pascal_triangle(15)
+    pascal_triangle(666)
 
 
 if __name__ == "__main__":

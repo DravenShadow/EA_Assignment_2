@@ -1,10 +1,8 @@
 def compare_file_with_array(array, sorted_array):
-    list = []
+    print 'Here are the line numbers with array spots that match: '
     for x in range(len(array)):
         if array[x] == sorted_array[x]:
-            list.append(x)
-    return list
-
+            print(x + 1)
 
 def read_in_list(file):
     list = []
@@ -13,7 +11,7 @@ def read_in_list(file):
         list.append(line[0:(len(line) - 1)])
     f.close()
     try:
-        list.remove(r'\n')
+        list.remove('')
     except ValueError:
         pass
     return list
