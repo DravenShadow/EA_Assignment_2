@@ -14,10 +14,12 @@ def compare_file_with_array(array, sorted_array):
     :param sorted_array:
     :return:
     """
+    print 'START COMPARE'
     print 'Here are the line numbers with array spots that match: '
     for x in range(len(array)):
         if array[x] == sorted_array[x]:
             print(x + 1)
+    print 'DONE WITH COMPARE\nGOODBYE!'
 
 
 def read_in_list(file):
@@ -29,12 +31,12 @@ def read_in_list(file):
     list = []
     f = open(file, 'r')
     for line in f:
-        list.append(line[0:(len(line) - 1)])
+        if line[0:(len(line) - 1)] == '':
+            pass
+        else:
+            list.append(int(line[0:(len(line) - 1)]))
     f.close()
-    try:
-        list.remove('')
-    except ValueError:
-        pass
+    print 'DONE READ_IN_LIST'
     return list
 
 
@@ -100,7 +102,8 @@ def main():
     sort it, and compare it.
     :return:
     """
-    list = read_in_list(raw_input('Enter in location of file: '))
+    # list = read_in_list(raw_input('Enter in location of file: '))
+    list = read_in_list(r'/home/draven/PycharmProjects/EA_Assignment_2/integer_file')
     original_list = list[:]
     divideAndConquer(list)
     compare_file_with_array(original_list, list)
