@@ -95,7 +95,6 @@ def read_in_list(file):
         else:
             list.append(int(line[0:(len(line) - 1)]))
     f.close()
-    print 'DONE READ_IN_LIST'
     return list
 
 
